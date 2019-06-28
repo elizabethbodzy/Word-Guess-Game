@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div class="heading">
+        <h1> Classic Rock Bands </h1>
+    </div>
+
+    <div class="background">
+        <div class="container">
+            <h2> Press any key to start playing! </h2>
+        
+        <div id="score">
+            <h3> Wins <span id="wins-text"></span></h3>
+        </div>
+
+        <div>
+            <h2 id="current-word"> _ _ _ _ _ _ _</h2>
+        </div>
+
+        <div>
+            <h3> Number of Guesses Remaining <span id="guess-remaining"></span></h3>
+        </div>
+
+        <div>
+            <h3> Letters Already Guessed <span id="letters-guessed"></span></h3>
+        </div>
+    </div>
+    </div>
+        <!-- <div>
+                <p> Press any key to start playing! <span id="directions-text"></span></p>
+                <p> Wins <span id="wins-text"></span></p>
+                <p> Current Word <br> <span id="current-word"></span></p>
+                <p> Number of Guesses Remaining<span id="guess-remaining"></span> </p>
+                <p> Letters Already Guessed <span id="letters-guessed"> </span></p>
+        </div>
+
+    <script type="text/javascript">
+
+        var bands = ["beatles", "rolling stones", "the who", "led zeppelin", "grateful dead"];
+        
+        var wins = 0;
+        var numberGuess = 9;
+        var currentWord = [];
+        
+        var winsText = document.getElementById("wins-text");
+        var guessRemainingText = document.getElementById("guess-remaining");
+        var lettersGuessedText = document.getElementById("letters-guessed");
+
+        document.onkeyup = function(event) {
+
+        // Determines which key was pressed.
+        var userGuess = event.key;
+
+        var band = bands[Math.floor(Math.random() * bands.length)];
+
+        var choices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", 
+                           "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+
+        var answer = [];
+        for (var i = 0; i < band.length; i++) {
+            answer[i] = "_";
+        }
+
+        var lettersLeft = band.length;
+
+        while (lettersLeft > 0) {
+            //Show Player progress
+            answer.join(" ");
+            //Take in input from player
+            // var guess = prompt("Guess a letter");
+            if (guess.length === 0) {
+               console.log("You entered a letter");
+            }
+            //Update answer and lettersLeft for each correct guess
+            for (var j = 0; j < band.length; j++) {
+                if (band[j] === guess) {
+                    answer[j] = guess;
+                    lettersLeft --;
+                }
+            }
+
+            winsText.textContent =  wins;
+        
+            guessRemainingText.textContent =  numberGuess;
+            lettersGuessedText.textContent = guessOptions;
+
+        }
+
+
+
+        };
+
+
+
+
+
+
+
+    </script> -->
+
+    
+</body>
+</html>
